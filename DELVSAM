@@ -1,0 +1,6 @@
+//EAD719XX JOB 'DELVSAM',CLASS=C,MSGCLASS=X,NOTIFY=&SYSUID   
+//* DELECAO DE ARQUIVO VSAM                                  
+//STEP1    EXEC PGM=IDCAMS                                   
+//SYSPRINT DD   SYSOUT=*                                     
+//SYSIN    DD   *                                            
+ DELETE GR.EAD719.ARQVSAM.KSDS PURGE CLUSTER                 
