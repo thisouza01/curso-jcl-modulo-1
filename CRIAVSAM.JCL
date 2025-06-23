@@ -2,7 +2,9 @@
 //* UTILITARIO QUE SERVE PARA CRAICAO DE ARQUIVOS VSAM       
 //STEP1    EXEC PGM=IDCAMS                                   
 //SYSPRINT DD   SYSOUT=*                                     
-//SYSIN    DD   *                                            
+//SYSIN    DD   *         
+ DELETE (GR.EAD719.ARQVSAM.KSDS) PURGE CLUSTER  
+ IF MAXCC = 8 THEN SET MAXCC = 0                
  DEFINE CLUSTER -                                            
   (NAME(GR.EAD719.ARQVSAM.KSDS) -                            
    VOL(PR39T7) -                                             
